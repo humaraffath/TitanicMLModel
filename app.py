@@ -20,8 +20,4 @@ def predict():
 
     prediction = model.predict([np.array(features)])
 
-    return f"Survival Prediction: {int(prediction[0])}"
-
-
-if __name__ == "__main__":
-    app.run(debug=True)
+    return {"Prediction" : int(prediction[0])}
